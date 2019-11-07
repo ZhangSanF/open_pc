@@ -37,6 +37,10 @@ const mutations = {
   [types.LOTTERY_CODES](state, list) {
     state.lotteryCodes = list;
   },
+  // map彩种编码
+  [types.DISPOSE_CODES_DATA](state, list) {
+    state.disposeCodesData = list;
+  },
 
   // 广告分组
   [types.AD_LIST](state, list) {

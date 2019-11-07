@@ -1,10 +1,11 @@
 <template>
   <div class="forecastPlanIndex">
-    <ul>
+    <ul v-if="Object.keys(disposeCodesData).length !== 0">
       <li
         v-for="(item,index) in forecastPlanIndexData"
         @click="goTo(item.code, item.expert_id, item.location, item.forecast_quantity)"
         :key="index"
+        v-if="disposeCodesData[item.code].is_forecast_rule !== 0"
       >
         <div>
           <img src="../../assets/images/2_03.png" width="60" height="60">
@@ -35,7 +36,7 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   name: "forecastPlanIndex",
@@ -59,10 +60,13 @@ export default {
     getForecastPlanIndexFunc() {
       this.getForecastPlanIndex().then(res => {
         if (res.code == 200) {
-          this.forecastPlanIndexData = res.data;
+          this.forecastPlanIndexData = res.data
         }
       });
     }
+  },
+  computed: {
+    ...mapGetters(['disposeCodesData'])
   }
 };
 </script>

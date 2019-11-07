@@ -13,6 +13,8 @@ const state = {
     cur_lottery_type: '',
     // 彩种编码
     lotteryCodes: [],
+    // map彩种编码
+    disposeCodesData: [],
     // 广告列表
     adList: [],
     // 基础数据

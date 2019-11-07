@@ -182,7 +182,13 @@ export const getLotteryCodes = ({
         commit('CUR_LOTTERY_CODE', res.data[0].code);
         commit('CUR_LOTTERY_TYPE', res.data[0].code_type);
       }
-      //console.log(res)
+
+      // map彩种编码
+      let obj = {}
+      res.data.forEach(item => {       
+        obj[item.code] = item
+      })
+      commit('DISPOSE_CODES_DATA', obj);
     } else {
       //console.log(res)
     }

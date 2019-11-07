@@ -13,6 +13,8 @@ export const CUR_LOTTERY_TYPE = 'CUR_LOTTERY_TYPE';
 
 // 彩种编码
 export const LOTTERY_CODES = 'LOTTERY_CODES';
+// map彩种编码
+export const DISPOSE_CODES_DATA = 'DISPOSE_CODES_DATA';
 
 // 广告分组
 export const AD_LIST = 'AD_LIST';

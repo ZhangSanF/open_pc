@@ -34,17 +34,6 @@ export default {
   methods: {
     ...mapActions(["getLotteryExpect"]),
 
-    // toLive() {
-    //   this.isActiveLive=true;
-    //   if (this.openResult.code == "cqklsf") {
-    //     this.$router.push("/Data/liveVideo/xync/" + this.openResult.code);
-    //   } else {
-    //     this.$router.push(
-    //       "/Data/liveVideo/" + this.openResult.code_type + "/" + this.openResult.code
-    //     );
-    //   }
-    // },
-
     //  获取开奖信息
     getLotteryExpectFunc(code) {
       this.getLotteryExpect(code);

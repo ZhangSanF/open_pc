@@ -28,6 +28,8 @@ export const cur_lottery_type =state=> {
 
 // 彩种编码
 export const lotteryCodes =state=> state.lotteryCodes;
+// map彩种编码
+export const disposeCodesData =state=> state.disposeCodesData;
 
 // 广告分组
 export const adList =state=> state.adList;
